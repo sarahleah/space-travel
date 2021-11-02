@@ -1,0 +1,8 @@
+.title-text {
+    grid-column: 2 / span 5;
+    grid-row: 7 / span 6;
+}
+
+h1.title-text {
+    margin: 1.5rem 0;
+}
