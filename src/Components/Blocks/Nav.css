@@ -38,11 +38,9 @@ nav .bold {
 }
 
 nav li {
-    display: flex;
     align-items: center;
-    height: 100%;
     letter-spacing: 2.7px;
-    margin: 0 auto;
+    margin: auto auto;
 }
 
 .page-marker, .hover-marker {
