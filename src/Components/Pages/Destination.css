@@ -9,6 +9,16 @@
 
 .destinations h5 {
     color: #FFFFFF;
-    grid-column: 2 / span 5;
+    grid-column: 2 / span 6;
     grid-row: 4 / span 1;
+}
+
+.destinations span {
+    color: #D0D6F9;
+    font-weight: bold;
+}
+
+.destinations img {
+    grid-row: 5 / span 6;
+    grid-column: 3 / span 6;
 }

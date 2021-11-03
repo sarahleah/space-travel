@@ -42,7 +42,7 @@ nav ul {
 nav li {
     align-items: center;
     letter-spacing: 2.7px;
-    margin: auto auto;
+    margin: auto;
 }
 
 .page-marker, .hover-marker {

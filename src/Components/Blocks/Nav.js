@@ -1,23 +1,41 @@
 import './Nav.css'
 
 import logo from '../../assets/shared/logo.svg'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Nav({ page }) {
 
     const navList = useRef(null)
     const home = useRef(null)
-    const destination = useRef(null)
     const crew = useRef(null)
     const technology = useRef(null)
     
+    let [firstRender, setFirstRender] = useState(true)
     let [hoverMarkerStyle, setHoverMarkerStyle] = useState({})
+
+    useEffect(() => {
+        if (firstRender) {
+            setFirstRender(false)
+            let left = home.current.getBoundingClientRect().left - navList.current.getBoundingClientRect().x
+            console.log(left)
+        } else {
+            let left = home.current.getBoundingClientRect().left - navList.current.getBoundingClientRect().x
+            console.log(left)
+    
+            setHoverMarkerStyle({ 
+                width: '66.36px',
+                left: `calc(${left}px + 1rem)` })
+        }
+    }, [firstRender])
+    
     // let [pageMarkerStyle, setPageMarkerStyle] = useState({})
 
     const handlePositionHoverMarker = (e) => {
-        let width = e.target.offsetWidth
-        let left = Math.floor(e.clientX - navList.current.getBoundingClientRect().left)
-        setHoverMarkerStyle({ width: width + 'px', left: left + 'px' })
+        if (!(e.target instanceof HTMLUListElement)) {
+            let width = e.target.closest('li').offsetWidth
+            let left = e.target.getBoundingClientRect().x - navList.current.getBoundingClientRect().x
+            setHoverMarkerStyle({ width: width + 'px', left: `calc(${left}px + 1rem)` })
+        }
         // console.log(navList.current)
     }
 
@@ -29,17 +47,18 @@ export default function Nav({ page }) {
                 <ul 
                     onMouseOver={handlePositionHoverMarker}
                     ref={navList}>
-                    <li ref={home}><strong>00 </strong>Home</li>
-                    <li ref={destination}><strong>01 </strong>Destination</li>
-                    <li ref={crew}><strong>02 </strong>Crew</li>
-                    <li ref={technology}><strong>03 </strong>Technology</li>
+                    <li><div ref={home}><strong>00</strong> Home</div></li>
+                    <li><div><strong>01</strong> Destination</div></li>
+                    <li><div><strong>02</strong> Crew</div></li>
+                    <li><div><strong>03</strong> Technology</div></li>
                 </ul>
                 <div 
                     className="page-marker"
                     ></div>
                 <div 
                     className="hover-marker"
-                    style={hoverMarkerStyle}></div>
+                    style={hoverMarkerStyle}>
+                </div>
             </div>
         </nav>
     )
