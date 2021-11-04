@@ -50,6 +50,10 @@ nav li {
     border-radius: 5px;
     height: 5px;
     bottom: 0px;
-    background-color: #FFFFFF;
     transition: ease-in-out all 1s;
+    background-color: #FFFFFF;
+}
+
+.hover-marker {
+    background-color: #ffffff91;
 }

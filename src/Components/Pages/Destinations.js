@@ -33,7 +33,7 @@ export default function Destinations() {
             <img 
                 src={imgs[planet]} 
                 alt={planet} />
-            <PlanetText data={planetData}/>
+            <PlanetText data={planetData} planetFuncs={{planet, setPlanet}}/>
         </section>
     )
 }

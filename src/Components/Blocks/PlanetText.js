@@ -2,13 +2,13 @@ import './PlanetText.css'
 
 import { useState } from 'react'
 
-export default function PlanetText({ data }) {
+import PlanetSlider from './PlanetSlider'
 
-    let [selectedPlanet, setSelectedPlanet] = useState("Moon")
+export default function PlanetText({ data, planetFuncs: {planet, setPlanet} }) {
 
     return (
         <section className="planet-text">
-            {/* <PlanetSlider sliderFuncs={[selectedPlanet, setSelectedPlanet]}/> */}
+            <PlanetSlider sliderFuncs={{planet, setPlanet}}/>
             <h2>{data.name}</h2>
             <p>{data.description}</p>
             <div className="stats">

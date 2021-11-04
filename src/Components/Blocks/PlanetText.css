@@ -1,9 +1,13 @@
 .planet-text {
-    grid-column: -5 / span 5;
+    grid-column: 8 / span 4;
     grid-row: 4 / span 7;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2.5fr 2fr;
 }
 
 .planet-text .stats {
+    border-top: 1px solid #ffffff52;
+    padding-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem

@@ -7,26 +7,16 @@ export default function Nav({ page }) {
 
     const navList = useRef(null)
     const home = useRef(null)
-    const crew = useRef(null)
-    const technology = useRef(null)
     
-    let [firstRender, setFirstRender] = useState(true)
     let [hoverMarkerStyle, setHoverMarkerStyle] = useState({})
 
     useEffect(() => {
-        if (firstRender) {
-            setFirstRender(false)
-            let left = home.current.getBoundingClientRect().left - navList.current.getBoundingClientRect().x
-            console.log(left)
-        } else {
-            let left = home.current.getBoundingClientRect().left - navList.current.getBoundingClientRect().x
-            console.log(left)
-    
-            setHoverMarkerStyle({ 
-                width: '66.36px',
-                left: `calc(${left}px + 1rem)` })
-        }
-    }, [firstRender])
+        let left = home.current.getBoundingClientRect().left - navList.current.getBoundingClientRect().x
+
+        setHoverMarkerStyle({ 
+            width: '66.36px',
+            left: `calc(${left}px + 1rem)` })
+    }, [])
     
     // let [pageMarkerStyle, setPageMarkerStyle] = useState({})
 
