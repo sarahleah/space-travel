@@ -1,7 +1,5 @@
 import './PlanetText.css'
 
-import { useState } from 'react'
-
 import PlanetSlider from './PlanetSlider'
 
 export default function PlanetText({ data, planetFuncs: {planet, setPlanet} }) {

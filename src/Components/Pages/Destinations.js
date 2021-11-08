@@ -29,7 +29,7 @@ export default function Destinations() {
     return (
         <section className="destinations">
             <Nav />
-            <h5><span>01 </span>pick your destination</h5>
+            <h5><span className="span-h5">01 </span>pick your destination</h5>
             <img 
                 src={imgs[planet]} 
                 alt={planet} />

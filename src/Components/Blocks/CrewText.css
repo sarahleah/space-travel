@@ -1,0 +1,19 @@
+.crew-text {
+    grid-column: 2 / span 6;
+}
+
+h4.crew-text {
+    color: #ffffff8a;
+    grid-row: 6 / span 1;
+}
+
+h3.crew-text {
+    grid-column: 2 / span 6;
+    grid-row: 7 / span 1;
+}
+
+p.crew-text {
+    grid-column: 2 / span 3;
+    padding-top: 1rem;
+    grid-row: 8 / span 2;
+}

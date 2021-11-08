@@ -42,3 +42,13 @@ h5 {
   font-size: 0.875rem;
   letter-spacing: 2.35px;
 }
+
+.span-h5 {
+  color: #D0D6F9;
+  font-weight: bold;
+}
+
+p {
+  color: #D0D6F9;
+  line-height: 2rem;
+}

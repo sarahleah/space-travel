@@ -1,0 +1,36 @@
+.crew-slider {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: fit-content;
+    width: 8rem;
+    grid-row: -2 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.radio {
+    position: relative;
+}
+
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.inner-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 10px;
+    background-color: darkgrey;
+    border-radius: 50%;
+}
+
+.radio:hover input ~ .inner-radio {
+    background-color: grey;
+}
+
+.radio input:checked ~ .inner-radio {
+    background-color: #FFFFFF;
+}
