@@ -3,6 +3,8 @@ import './Nav.css'
 import logo from '../../assets/shared/logo.svg'
 import { useEffect, useRef, useState } from 'react'
 
+import { Link } from 'react-router-dom'
+
 export default function Nav({ page }) {
 
     const navList = useRef(null)
@@ -37,10 +39,10 @@ export default function Nav({ page }) {
                 <ul 
                     onMouseOver={handlePositionHoverMarker}
                     ref={navList}>
-                    <li><div ref={home}><strong>00</strong> Home</div></li>
-                    <li><div><strong>01</strong> Destination</div></li>
-                    <li><div><strong>02</strong> Crew</div></li>
-                    <li><div><strong>03</strong> Technology</div></li>
+                    <li><Link to='/'><div ref={home}><strong>00</strong> Home</div></Link></li>
+                    <li><Link to='/destinations'><div><strong>01</strong> Destination</div></Link></li>
+                    <li><Link to='/crew'><div><strong>02</strong> Crew</div></Link></li>
+                    <li><Link to='/technology'><div><strong>03</strong> Technology</div></Link></li>
                 </ul>
                 <div 
                     className="page-marker"
