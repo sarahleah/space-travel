@@ -1,0 +1,21 @@
+.tech-select {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 6;
+}
+
+.tech-select button {
+    border-radius: 100%;
+    border: 1px solid #FFFFFF;
+    width: 5rem;
+    height: 5rem;
+    color: #FFFFFF;   
+    font-size: 2rem;
+    font-family: 'Bellefair', serif;
+}
+
+.tech-select .selected {
+    color: black;
+    background-color: #FFFFFF;
+}

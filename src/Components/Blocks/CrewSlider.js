@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import './CrewSlider.css'
 
 export default function CrewSlider({funcs: [member, setMember]}) {

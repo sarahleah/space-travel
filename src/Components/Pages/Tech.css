@@ -1,0 +1,58 @@
+.tech-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-img {
+    grid-column: -5 / span 6;
+    grid-row: 4 / span 6;
+    padding-top: 1rem;
+}
+
+.tech h5 {
+    color: #FFFFFF;
+    grid-column: 2 / span 6;
+    grid-row: 4 / span 1;
+}
+
+.background {
+    position: absolute;
+    top: 0%;
+    left: -50%;
+    z-index: -1;
+    background-image: url('../../assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200vh;
+    width: 200vw;
+    transform-origin: top;
+    animation: rotate 500s linear infinite;
+    border: 1px solid #0c0e17;
+}
+
+.background::after {
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    background-image: url('../../assets/technology/background-technology-desktop.jpg');
+    transform: scaleY(-1)
+}
+
+.tech {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 100vh;
+    width: 100vw;
+}
+
+@keyframes rotate {
+    to {
+        transform: translate(-50%, 50%);
+        transform: rotate(360deg)
+    }   
+}

@@ -1,0 +1,16 @@
+.terminology {
+    text-transform: uppercase;
+    grid-row: 5 / span 1;
+    grid-column: 3 / span 2;
+    letter-spacing: 2.7px;
+}
+
+.tech-term {
+    grid-row: 6 / span 1;
+    grid-column: 3 / span 6;
+}
+
+.tech-descrip {
+    grid-row: 7 / span 3;
+    grid-column: 3 / span 4;
+}

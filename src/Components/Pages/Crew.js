@@ -20,7 +20,7 @@ export default function Crew() {
     return (
         <section className="crew">
             <Nav />
-            <h5><span className="span-h5">01 </span>pick your destination</h5>
+            <h5><span className="span-h5">01 </span>Meet your crew</h5>
             <CrewText data={crew[member]}/>
             <img className="member-img" src={imgs[member]} alt="" />
             <CrewSlider funcs={[member, setMember]}/>

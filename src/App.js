@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './Components/Pages/Home'
 import Destinations from './Components/Pages/Destinations'
 import Crew from './Components/Pages/Crew';
+import Tech from './Components/Pages/Tech';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path='/crew'>
           <Crew />
+        </Route>
+        <Route path='/technology'>
+          <Tech />
         </Route>
       </Switch>
     </div>

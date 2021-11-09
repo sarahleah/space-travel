@@ -13,9 +13,9 @@ nav {
 nav div.line {
     position: absolute;
     height: 1px;
-    width: 30%;
+    width: 35%;
     padding: 0 1rem;
-    right: 60%;
+    right: 58%;
     background-color: white;
     z-index: 2;
 }
