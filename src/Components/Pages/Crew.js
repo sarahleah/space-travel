@@ -1,6 +1,5 @@
 import './Crew.css'
 
-import Nav from '../Blocks/Nav'
 import CrewText from '../Blocks/CrewText'
 import CrewSlider from '../Blocks/CrewSlider'
 import { useState } from 'react'
@@ -17,7 +16,6 @@ export default function Crew() {
 
     const [member, setMember] = useState(0)
 
-    // className = 'crew'
     return (
         <>
             <h5 className="intro-h5"><span className="span-h5">01 </span>Meet your crew</h5>

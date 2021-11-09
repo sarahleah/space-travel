@@ -8,17 +8,9 @@ import { Link } from 'react-router-dom'
 export default function Nav({ funcs: [page, setPage] }) {
 
     const navList = useRef(null)
-    const home = useRef(null)
     
     let [hoverMarkerStyle, setHoverMarkerStyle] = useState({})
-
-    useEffect(() => {
-        let left = home.current.getBoundingClientRect().left - navList.current.getBoundingClientRect().x
-
-        setHoverMarkerStyle({ 
-            width: '66.36px',
-            left: `calc(${left}px + 1rem)` })
-    }, [])
+    let [pageMarkerStyle, setPageMarkerStyle] = useState({})
     
     const handlePositionHoverMarker = e => {
         if (!(e.target instanceof HTMLUListElement)) {
@@ -38,6 +30,52 @@ export default function Nav({ funcs: [page, setPage] }) {
         }
     }
 
+    let links = useRef([
+        {
+            path: '/',
+            num: '00',
+            text: 'Home',
+            selected: false
+        },
+        {
+            path: '/destinations',
+            num: '01',
+            text: 'Destinations',
+            selected: false
+        },
+        {
+            path: '/crew',
+            num: '02',
+            text: 'Crew',
+            selected: false
+        },
+        {
+            path: '/technology',
+            num: '03',
+            text: 'Technology',
+            selected: false
+        },
+    ])
+
+    links.current = links.current.map(link => {
+        return (
+            link.text.toLowerCase() === page
+            ? {...link, selected: true}
+            : {...link, selected: false}
+            )
+    })
+
+    useEffect(() => {
+        let currPage = document.querySelector('.curr-page')
+        let left = currPage.getBoundingClientRect().left - navList.current.getBoundingClientRect().x
+        let width = currPage.offsetWidth
+
+        setPageMarkerStyle({ 
+            width,
+            left: `calc(${left}px + 1rem)` 
+        })
+    }, [page])
+
     return (
         <nav>
             <img src={logo} alt="logo" className="nav-logo"/>
@@ -47,13 +85,19 @@ export default function Nav({ funcs: [page, setPage] }) {
                     onMouseOver={handlePositionHoverMarker}
                     ref={navList}
                     onClick={handleSetPage}>
-                    <li><Link to='/'><div ref={home}><strong>00</strong> Home</div></Link></li>
-                    <li><Link to='/destinations'><div><strong>01</strong> Destination</div></Link></li>
-                    <li><Link to='/crew'><div><strong>02</strong> Crew</div></Link></li>
-                    <li><Link to='/technology'><div><strong>03</strong> Technology</div></Link></li>
+                    {links.current.map(({ path, num, text, selected }) => {
+                        return (
+                            <li key={path} className={selected ? 'curr-page' : ''}>
+                                <Link to={path}>
+                                    <div><strong>{num}</strong> {text}</div>
+                                </Link>
+                            </li>
+                        )
+                    })}
                 </ul>
                 <div 
                     className="page-marker"
+                    style={pageMarkerStyle}
                     ></div>
                 <div 
                     className="hover-marker"

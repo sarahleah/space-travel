@@ -1,5 +1,6 @@
 .planet-slider {
     position: relative;
+    align-self: flex-end;
 }
 
 .planet-slider ul {
@@ -18,7 +19,10 @@
 }
 
 .planet-slider .selected-planet-marker {
-    background-color: #FFFFFF;
-    height: 2px;
+    position: absolute;
     border-radius: 5px;
+    height: 5px;
+    bottom: 0px;
+    transition: ease-in-out all 1s;
+    background-color: #FFFFFF;
 }

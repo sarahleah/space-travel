@@ -1,6 +1,5 @@
 import './Destination.css'
 
-import Nav from '../Blocks/Nav'
 import PlanetText from '../Blocks/PlanetText'
 
 import { useState } from 'react'

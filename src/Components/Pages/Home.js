@@ -1,11 +1,13 @@
 import './Home.css'
 
-import Main from '../Blocks/Main'
+import Explore from '../Blocks/Explore'
+import TitleText from '../Blocks/TitleText'
 
-export default function Home() {
+export default function Home({ setPage }) {
     return (
         <>
-            <Main />
+            <TitleText />
+            <Explore setPage={setPage} />
         </>
     )
 }

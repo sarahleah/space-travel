@@ -20,7 +20,7 @@ export default function PlanetSlider({sliderFuncs: {planet, setPlanet}}) {
         if (!(e.target instanceof HTMLUListElement)) {
             let width = e.target.closest('li').offsetWidth
             let left = e.target.getBoundingClientRect().x - planetList.current.getBoundingClientRect().x
-            setHoverMarkerStyle({ width: width + 'px', left: `calc(${left}px)` })
+            setHoverMarkerStyle({ width: width + 'px', left: `${left}px` })
         }
     }
 
@@ -39,7 +39,6 @@ export default function PlanetSlider({sliderFuncs: {planet, setPlanet}}) {
             return {name: currPlanet.name, selected: currPlanet.selected}
             }
         )
-
     }, [planet])
 
     return (

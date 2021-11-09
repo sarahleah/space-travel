@@ -22,7 +22,7 @@ function App() {
       <Nav funcs={[page, setPage]}/>
       <Switch>
         <Route exact path='/'>
-          <Home />
+          <Home setPage={setPage}/>
         </Route>
         <Route path='/destinations'>
           <Destinations />
