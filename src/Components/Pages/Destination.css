@@ -1,19 +1,4 @@
-.destinations {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    height: 100vh;
-    width: 100vw;
-    background-image: url('../../assets/destination/background-destination-desktop.jpg');
-}
-
-.destinations h5 {
-    color: #FFFFFF;
-    grid-column: 2 / span 6;
-    grid-row: 4 / span 1;
-}
-
-.destinations img {
+.destination-img {
     grid-row: 5 / span 6;
     grid-column: 3 / span 6;
 }

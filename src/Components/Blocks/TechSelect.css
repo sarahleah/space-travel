@@ -18,4 +18,16 @@
 .tech-select .selected {
     color: black;
     background-color: #FFFFFF;
+    animation: fade-in 0.3s ease-in 1;
+}
+
+@keyframes fade-in {
+    from {
+        color: #FFFFFF;
+        background-color: transparent;
+    }
+    to {
+        background-color: #FFFFFF;
+        color: black;
+    }
 }

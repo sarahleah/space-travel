@@ -1,6 +1,5 @@
 import './Tech.css'
 
-import Nav from "../Blocks/Nav";
 import { useState } from 'react';
 import { technology } from '../../data.json'
 
@@ -18,15 +17,11 @@ export default function Tech() {
     const [tech, setTech] = useState(0)
 
     return (
-        <div className="tech-wrap">
-            <section className="tech">
-                <Nav />
-                <TechSelect funcs={[tech, setTech]}/>
-                <h5><span className="span-h5">01 </span>pick your destination</h5>
-                <TechText data={technology[tech]}/>
-                <img className="tech-img" src={imgs[tech]} alt="" />
-            </section>
-            <div className="background"></div>
-        </div>
+        <>
+            <TechSelect funcs={[tech, setTech]}/>
+            <h5 className="intro-h5"><span className="span-h5">01 </span>pick your destination</h5>
+            <TechText data={technology[tech]}/>
+            <img className="tech-img" src={imgs[tech]} alt="" />
+        </>
     )
 }

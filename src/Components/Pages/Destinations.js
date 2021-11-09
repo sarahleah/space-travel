@@ -27,13 +27,14 @@ export default function Destinations() {
         .find(data => data.name === planet)
 
     return (
-        <section className="destinations">
-            <Nav />
-            <h5><span className="span-h5">01 </span>pick your destination</h5>
+        <>
+            <h5 className="intro-h5"><span className="span-h5">01 </span>pick your destination</h5>
             <img 
                 src={imgs[planet]} 
-                alt={planet} />
+                alt={planet} 
+                className="destination-img"
+                />
             <PlanetText data={planetData} planetFuncs={{planet, setPlanet}}/>
-        </section>
+        </>
     )
 }

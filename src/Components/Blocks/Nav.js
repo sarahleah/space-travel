@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
-export default function Nav({ page }) {
+export default function Nav({ funcs: [page, setPage] }) {
 
     const navList = useRef(null)
     const home = useRef(null)
@@ -20,15 +20,22 @@ export default function Nav({ page }) {
             left: `calc(${left}px + 1rem)` })
     }, [])
     
-    // let [pageMarkerStyle, setPageMarkerStyle] = useState({})
-
-    const handlePositionHoverMarker = (e) => {
+    const handlePositionHoverMarker = e => {
         if (!(e.target instanceof HTMLUListElement)) {
             let width = e.target.closest('li').offsetWidth
             let left = e.target.getBoundingClientRect().x - navList.current.getBoundingClientRect().x
             setHoverMarkerStyle({ width: width + 'px', left: `calc(${left}px + 1rem)` })
         }
-        // console.log(navList.current)
+    }
+
+    const handleSetPage = e => {
+        if (!(e.target instanceof HTMLUListElement)) {
+            let newPage = e.target.closest('li')
+                .textContent
+                .toLowerCase()
+                .slice(3)
+            setPage(newPage)
+        }
     }
 
     return (
@@ -38,7 +45,8 @@ export default function Nav({ page }) {
             <div className="right">
                 <ul 
                     onMouseOver={handlePositionHoverMarker}
-                    ref={navList}>
+                    ref={navList}
+                    onClick={handleSetPage}>
                     <li><Link to='/'><div ref={home}><strong>00</strong> Home</div></Link></li>
                     <li><Link to='/destinations'><div><strong>01</strong> Destination</div></Link></li>
                     <li><Link to='/crew'><div><strong>02</strong> Crew</div></Link></li>

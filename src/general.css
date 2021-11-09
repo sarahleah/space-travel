@@ -1,0 +1,21 @@
+.home {
+    background-image: url('./assets/home/background-home-desktop.jpg');
+}
+
+.crew {
+    background-image: url('./assets/crew/background-crew-desktop.jpg');
+}
+
+.destination {
+    background-image: url('./assets/destination/background-destination-desktop.jpg');
+}
+
+.technology {
+    background-image: url('./assets/technology/background-technology-desktop.jpg');
+}
+
+.intro-h5 {
+    color: #FFFFFF;
+    grid-column: 2 / span 6;
+    grid-row: 4 / span 1;
+}

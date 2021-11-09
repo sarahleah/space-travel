@@ -17,13 +17,13 @@ export default function Crew() {
 
     const [member, setMember] = useState(0)
 
+    // className = 'crew'
     return (
-        <section className="crew">
-            <Nav />
-            <h5><span className="span-h5">01 </span>Meet your crew</h5>
+        <>
+            <h5 className="intro-h5"><span className="span-h5">01 </span>Meet your crew</h5>
             <CrewText data={crew[member]}/>
             <img className="member-img" src={imgs[member]} alt="" />
             <CrewSlider funcs={[member, setMember]}/>
-        </section>
+        </>
     )
 }
