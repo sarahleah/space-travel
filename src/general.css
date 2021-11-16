@@ -1,3 +1,9 @@
+.home, .technology, .destinations, .crew {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
 .home {
     background-image: url('./assets/home/background-home-desktop.jpg');
 }

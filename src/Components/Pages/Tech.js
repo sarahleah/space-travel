@@ -17,11 +17,15 @@ export default function Tech() {
     const [tech, setTech] = useState(0)
 
     return (
-        <>
+        <div className="grid-wrap">
             <TechSelect funcs={[tech, setTech]}/>
             <h5 className="intro-h5"><span className="span-h5">01 </span>pick your destination</h5>
             <TechText data={technology[tech]}/>
-            <img className="tech-img" src={imgs[tech]} alt="" />
-        </>
+            <img 
+                className="tech-img" 
+                src={imgs[tech]} 
+                alt=""
+                 />
+        </div>
     )
 }

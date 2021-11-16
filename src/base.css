@@ -6,6 +6,16 @@
   grid-template-rows: repeat(12, 1fr);
   height: 100vh;
   width: 100vw;
+  position: relative;
+}
+
+.grid-wrap {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+  width: 100vw;
 }
 
 h1, h2, h3, h4, h5, h6, .sh1, .sh2 {

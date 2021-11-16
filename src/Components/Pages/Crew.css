@@ -8,10 +8,6 @@
     overflow: hidden;
 }
 
-.crew * {
-    transition: all 1s ease-in-out;
-}
-
 .crew h5 {
     color: #FFFFFF;
     grid-column: 2 / span 6;

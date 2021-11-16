@@ -17,11 +17,11 @@ export default function Crew() {
     const [member, setMember] = useState(0)
 
     return (
-        <>
+        <div className="grid-wrap">
             <h5 className="intro-h5"><span className="span-h5">01 </span>Meet your crew</h5>
             <CrewText data={crew[member]}/>
             <img className="member-img" src={imgs[member]} alt="" />
             <CrewSlider funcs={[member, setMember]}/>
-        </>
+        </div>
     )
 }

@@ -26,7 +26,7 @@ export default function Destinations() {
         .find(data => data.name === planet)
 
     return (
-        <>
+        <div className="grid-wrap">
             <h5 className="intro-h5"><span className="span-h5">01 </span>pick your destination</h5>
             <img 
                 src={imgs[planet]} 
@@ -34,6 +34,6 @@ export default function Destinations() {
                 className="destination-img"
                 />
             <PlanetText data={planetData} planetFuncs={{planet, setPlanet}}/>
-        </>
+        </div>
     )
 }
