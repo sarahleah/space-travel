@@ -1,0 +1,37 @@
+.page-appear, .page-appear-active, .page-enter, .page-enter-active  {
+    opacity: 0;
+    transition: opacity 500ms 10000ms;
+}
+
+.page-appear-active {
+    opacity: 0;
+    transition: opacity 500ms 10000ms;
+    background-color: tomato;
+}
+
+.page-enter {
+    opacity: 0;
+    transition: opacity 500ms 10000ms;
+    background-color: lime;
+}
+.page-enter-active {
+    opacity: 1;
+    transition-delay: 10000ms;
+    background-color: lime;
+}
+.page-enter-done {
+    opacity: 1;
+    transition-delay: 10000ms;
+    background-color: lime;
+}
+
+.page-exit {
+    opacity: 0;
+    transition: opacity 100ms;
+    background-color: hotpink;
+}
+.page-exit-active {
+    opacity: 0;
+    transition: opacity 100ms;
+    background-color: hotpink;
+}
